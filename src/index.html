@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bakery & Ingredients Store | Home</title>
+  <meta name="description"
+    content="Discover delicious cakes, desserts, and premium baking ingredients at Bakery & Ingredients Store. Everything you need to bake, create, and enjoy sweet moments.">
+  <meta name="author" content="Arturo Romero">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BakeShop | Cakes, Desserts & Baking Ingredients">
+  <meta property="og:description"
+    content="Discover delicious cakes, desserts, and premium baking ingredients. Everything you need to bake, create, and enjoy sweet moments. 🍰">
+  <meta property="og:image" content="https://tu-usuario.github.io/bakery/images/logo.svg">
+  <meta property="og:url" content="https://tu-usuario.github.io/bakery/index.html">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/bakery-small.css ">
+  <link rel="stylesheet" href="styles/bakery-larger.css">
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+</head>
+
+<body>
+  <header id="header" class="divider"></header>
+
+  <main class="divider">
+    <div class="hero">
+      <img src="images/hero-sm.webp" srcset="images/hero-sm.webp 500w, images/hero-large.webp"
+        alt="delicious cakes and desserts" />
+
+      <div class="logo logo--square">
+        <img src="/images/cake.svg" alt="bakery logo" />
+        <div>Bake<span class="highlight">Shop</span></div>
+      </div>
+
+      <div class="mission">
+        <p>
+          We offer delicious cakes, desserts, and premium baking ingredients
+          to help you create and enjoy sweet moments.
+        </p>
+      </div>
+    </div>
+
+    <section class="products">
+      <ul class="product-grid">
+
+        <li>
+          <a href="product_listing/index.html?category=cakes">
+            <img src="/images/category-cakes.svg" alt="Cakes" />
+            <h2>Cakes</h2>
+          </a>
+        </li>
+
+        <li>
+          <a href="product_listing/index.html?category=desserts">
+            <img src="/images/category-desserts.svg" alt="Desserts" />
+            <h2>Desserts</h2>
+          </a>
+        </li>
+
+        <li>
+          <a href="product_listing/index.html?category=ingredients">
+            <img src="/images/category-ingredients.svg" alt="Ingredients" />
+            <h2>Ingredients</h2>
+          </a>
+        </li>
+
+        <li>
+          <a href="product_listing/index.html?category=specials">
+            <img src="/images/category-specials.svg" alt="Special Offers" />
+            <h2>Specials</h2>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+</body>
+
+</html>
