@@ -27,6 +27,7 @@
     /* PRODUCT LIST */
     .product-list {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
     }
 
     /* PRODUCT DETAIL */
@@ -35,6 +36,37 @@
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         align-items: center;
+    }
+
+    /* PRODUCT LISTING */
+    /* SEARCH + SORT INLINE */
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    /* SEARCH - all */
+    .search-container {
+        flex: 1;
+    }
+
+    /* INPUT - expand */
+    .search-input {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* SORT - Aling right */
+    .sort-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
     }
 
 }

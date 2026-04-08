@@ -68,10 +68,10 @@ header {
 }
 
 .hero .logo--square {
-  display: none;
+    display: none;
 }
 
-/* 🔥 controla tamaño del logo central */
+/* LOGO CENTRAL */
 .logo--square {
     width: 100px;
     height: auto;
@@ -280,4 +280,39 @@ footer {
     text-align: center;
     font-size: var(--small-font);
     padding: 1rem;
+}
+
+/* PRODUCT LISTING */
+
+/* SORT */
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sort-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.sort-container label {
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+    white-space: nowrap;
+}
+
+.sort-container select {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.4rem;
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+}
+
+.search-container,
+.sort-container {
+    padding: 0 1rem;
 }

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Products | BakeShop</title>
+    <meta name="description"
+        content="Browse our selection of cakes, desserts, and baking ingredients. Find the perfect products to create and enjoy delicious homemade treats.">
+    <meta name="author" content="Arturo Romero">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BakeShop | Product Listing">
+    <meta property="og:description"
+        content="Explore our bakery products including cakes, desserts, and premium ingredients. Find everything you need to bake and enjoy sweet moments. 🍰">
+    <meta property="og:image" content="https://wdd330-bakerystore.onrender.com/images/cake.svg">
+    <meta property="og:url" content="https://wdd330-bakerystore.onrender.com/product_listing/index.html">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/bakery-small.css">
+    <link rel="stylesheet" href="../styles/bakery-larger.css">
+
+    <!-- Scripts -->
+    <script type="module" src="../scripts/product-listing.js"></script>
+</head>
+
+<body>
+    <header class="divider" id="header"></header>
+
+    <main class="divider">
+
+        <section class="products">
+            <h1>
+                Category:
+                <span id="category-title" class="highlight"></span>
+            </h1>
+
+            <div class="filters">
+                <!-- SEARCH -->
+                <div class="search-container">
+                    <input type="text" id="product-search" class="search-input"
+                        placeholder="Search cakes, desserts, ingredients..." />
+                </div>
+
+                <!-- SORT -->
+                <div class="sort-container">
+                    <label for="sortOptions">Sort by:</label>
+                    <select id="sortOptions">
+                        <option value="">Select</option>
+                        <option value="name-asc">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="price-asc">Price (Low to High)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- PRODUCT LIST -->
+            <ul class="product-list" id="product-list"></ul>
+
+        </section>
+
+    </main>
+
+    <footer id="footer"></footer>
+</body>
+
+</html>
