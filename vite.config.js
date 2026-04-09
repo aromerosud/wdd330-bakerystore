@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "src/index.html"),
         inventory: resolve(__dirname, "src/product_listing/index.html"),
+        detail: resolve(__dirname, "src/product_pages/index.html"),
       },
     },
   },
