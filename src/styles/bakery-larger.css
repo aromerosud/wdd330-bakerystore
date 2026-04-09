@@ -69,4 +69,38 @@
         gap: 0.5rem;
     }
 
+    /* PRODUCT DETAILS */
+    .product-detail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "image name"
+            "image info";
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Name Top */
+    #p-name {
+        grid-area: name;
+        margin: 0;
+    }
+
+    /* Image left */
+    .product-detail figure {
+        grid-area: image;
+        margin: 0;
+    }
+
+    .product-detail figure img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Info under the name */
+    #product-info {
+        grid-area: info;
+        padding-left: 0;
+    }
+
 }

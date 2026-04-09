@@ -1,7 +1,9 @@
 const mealDB = import.meta.env.VITE_MEALDB_URL;
 const fakeStore = import.meta.env.VITE_FAKESTORE_URL;
+const dummyJson = import.meta.env.VITE_DUMMYJSON_URL;
 
 import { specials } from '../public/data/specials.mjs';
+
 
 async function convertToJson(res) {
   const jsonResponse = await res.json();
@@ -13,9 +15,53 @@ async function convertToJson(res) {
   }
 }
 
+function extractIngredients(meal) {
+  const ingredients = [];
+
+  for (let i = 1; i <= 20; i++) {
+    const ingredient = meal[`strIngredient${i}`];
+    const measure = meal[`strMeasure${i}`];
+
+    if (ingredient && ingredient.trim() !== "") {
+      ingredients.push(`${measure} ${ingredient}`);
+    }
+  }
+
+  return ingredients;
+}
+
 export default class ExternalServices {
-  async getData(category) {
-    switch (category) {
+
+  constructor(category) {
+    this.category = category;
+  }
+
+  async getProductsWithFallback() {
+    try {
+      const res = await fetch(`${fakeStore}products`);
+      if (!res.ok) throw new Error("FakeStore fail");
+
+      const data = await convertToJson(res);
+      return data;
+    } catch (error) {
+      console.warn("FakeStore No Available, use DummyJSON")
+    }
+
+    try {
+      const res = await fetch(`${dummyJson}products`);
+      if (!res.ok) throw new Error("DummyJSON fail");
+
+      const data = await convertToJson(res);
+      return data.products;
+
+    } catch (error) {
+      console.warn("Both APIs fail");
+      return [];
+    }
+  }
+
+  async getData() {
+    switch (this.category) {
       case "cakes":
         return this.getCakes();
 
@@ -91,18 +137,49 @@ export default class ExternalServices {
   }
 
   async initFakeStore() {
-    if (!this.fakeProducts) {
-      const response = await fetch(`${fakeStore}products`);
-      this.fakeProducts = await convertToJson(response);
+    if (!this.products) {
+      this.products = await this.getProductsWithFallback();
     }
   }
 
   async findProductById(id) {
-    const response = await fetch(`${baseURL}product/${id}`);
-    const data = await convertToJson(response);
-    console.log(data.Result);
-    return data.Result;
+    if (this.category === "specials") {
+      return this.findProductByIdFromLocal(id);
+    } else {
+      return this.findProductByIdFromAPI(id);
+    }
   }
+
+  async findProductByIdFromLocal(id) {
+    const list = await this.getData();
+    return list.find(item => item.Id == id);
+  }
+
+  async findProductByIdFromAPI(id) {
+    await this.initFakeStore();
+
+    //API theMealDB
+    const res = await fetch(`${mealDB}lookup.php?i=${id}`);
+    const data = await convertToJson(res);
+
+    const meal = data.meals?.[0];
+    if (!meal) return null;
+
+    //Generate index
+    const index = parseInt(id) % this.products.length;
+
+    return {
+      Id: meal.idMeal,
+      Name: meal.strMeal,
+      Image: meal.strMealThumb,
+      Price: this.getFakeStorePrice(index),
+      Description: meal.strInstructions,
+      Ingredients: extractIngredients(meal),
+      Rating: (Math.random() * 2 + 3).toFixed(1),
+      Category: this.category
+    };
+  }
+
 
   async checkout(payload) {
     const options = {
@@ -116,7 +193,7 @@ export default class ExternalServices {
     const response = await fetch(`${baseURL}checkout`, options);
     return await convertToJson(response);
   }
-  
+
 }
 
 

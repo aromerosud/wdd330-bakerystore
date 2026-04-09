@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Product Detail | BakeShop</title>
+  <meta name="description" content="Bakery product details - cakes, desserts, ingredients and specials.">
+  <meta name="author" content="Arturo Romero">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BakeShop | Product Detail">
+  <meta property="og:description"
+    content="Discover delicious bakery products including cakes, desserts, ingredients, and exclusive specials. 🍰">
+  <meta property="og:image" content="https://wdd330-bakerystore.onrender.com/images/cake.svg">
+
+  <meta property="og:url" content="https://wdd330-bakerystore.onrender.com/product_pages/index.html">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/bakery-small.css">
+  <link rel="stylesheet" href="../styles/bakery-larger.css">
+
+  <!-- Scripts -->
+  <script type="module" src="../scripts/product.js"></script>
+</head>
+
+<body>
+  <header id="header" class="divider"></header>
+
+  <main class="divider">
+    <section class="product-detail">
+
+      <h2 id="p-name">Product Name</h2>
+
+      <!-- IMAGEN -->
+      <figure>
+        <img src="" alt="product image" id="p-image" />
+      </figure>
+
+      <!-- INFO -->
+      <section id="product-info">
+
+        <!-- PRICE -->
+        <p id="p-price" class="product-price"></p>
+
+        <!-- RATING -->
+        <p id="p-rating"></p>
+
+        <!-- DESCRIPTION -->
+        <p id="p-description"></p>
+
+        <!-- INGREDIENTS -->
+        <ul id="p-ingredients"></ul>
+
+        <!-- BUTTON -->
+        <button id="add-to-cart">Add to Cart</button>
+      </section>
+
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+</body>
+
+</html>

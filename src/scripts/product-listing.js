@@ -22,7 +22,7 @@ const titleElement = document.getElementById("category-title");
 titleElement.textContent = formatCategory(category);
 
 // Listing
-const dataSource = new ExternalServices();
+const dataSource = new ExternalServices(category);
 const element = document.querySelector(".product-list");
 
 const listing = new ProductList(category, dataSource, element);
