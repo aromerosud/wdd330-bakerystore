@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Checkout | BakeShop</title>
+  <meta name="description" content="Review your cart with selected bakery items before completing your purchase.">
+  <meta name="author" content="Arturo Romero">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BakeShop | Checkout">
+  <meta property="og:description"
+    content="Review and manage your shopping cart with selected bakery items, including cakes, pastries, and desserts before checkout.">
+  <meta property="og:image" content="https://wdd330-bakerystore.onrender.com/images/cake.svg">
+
+  <meta property="og:url" content="https://wdd330-bakerystore.onrender.com/checkout/index.html">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/bakery-small.css">
+  <link rel="stylesheet" href="../styles/bakery-larger.css">
+
+  <!-- Scripts -->
+  <script type="module" src="../scripts/checkout.js"></script>
+</head>
+
+<body>
+  <header class="divider" id="header"></header>
+
+  <main class="divider checkout">
+    <h2>Review & Place your Order</h2>
+    <section class="checkout-form">
+      <form name="checkout">
+        <input type="hidden" name="orderDate" id="orderDate">
+
+        <fieldset>
+          <legend></legend>
+          <div class="checkout__name">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" required>
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" required>
+          </div>
+          <div class="checkout__address">
+            <label for="street">Street Address</label>
+            <input type="text" name="street" id="street" required>
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" required>
+            <label for="state">State</label>
+            <input type="text" name="state" id="state" required>
+            <label for="zip">Zip</label>
+            <input type="text" name="zip" id="zip" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <div class="checkout__payment">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" name="cardNumber" id="cardNumber" required>
+            <label for="expiration">Expiration</label>
+            <input type="text" name="expiration" id="expiration" required>
+            <label for="code">CVV</label>
+            <input type="text" name="code" id="code" required>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-summary">
+          <legend>Order Summary</legend>
+
+          <div class="order__summary">
+            <div>Items</div>
+            <div id="num-items"></div>
+            <div>Subtotal</div>
+            <div id="cartTotal"></div>
+            <div>Tax</div>
+            <div id="tax"></div>
+            <div>Shipping</div>
+            <div id="shipping"></div>
+            <div>Total</div>
+            <div id="orderTotal"></div>
+          </div>
+        </fieldset>
+        <button type="submit" id="checkoutSubmit">Checkout</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+</body>
+
+</html>

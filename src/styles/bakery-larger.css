@@ -137,4 +137,84 @@
         padding: 0.8rem 1.5rem;
     }
 
+    /* CHECKOUT */
+
+    .checkout {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .checkout h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .checkout-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .checkout__name,
+    .checkout__address,
+    .checkout__payment {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin-bottom: 1rem;
+    }
+
+    /* PAYMENT */
+    .checkout__payment {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .checkout__payment label[for="cardNumber"],
+    .checkout__payment input#cardNumber {
+        grid-column: 1 / -1;
+    }
+
+    .checkout__payment label[for="expiration"],
+    .checkout__payment input#expiration,
+    .checkout__payment label[for="code"],
+    .checkout__payment input#code {
+        grid-column: auto;
+    }
+
+
+    .checkout-summary {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    #checkoutSubmit {
+        max-width: 300px;
+        margin: 1rem auto 0;
+    }
+
+    /* SUCCESS */
+    .success {
+        min-height: 70vh;
+        align-items: center;
+    }
+
+    .success-message {
+        max-width: 600px;
+        padding: 3rem 2rem;
+    }
+
+    .success h2 {
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    #orderId {
+        font-size: 1.3rem;
+    }
 }

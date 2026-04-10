@@ -1,6 +1,7 @@
 const mealDB = import.meta.env.VITE_MEALDB_URL;
 const fakeStore = import.meta.env.VITE_FAKESTORE_URL;
 const dummyJson = import.meta.env.VITE_DUMMYJSON_URL;
+const baseURL = import.meta.env.VITE_SERVER_URL;
 
 import { specials } from '../public/data/specials.mjs';
 

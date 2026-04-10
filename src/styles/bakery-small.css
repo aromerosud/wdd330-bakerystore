@@ -490,3 +490,134 @@ footer {
     border-radius: 6px;
     text-decoration: none;
 }
+
+/* CHECKOUT */
+.checkout {
+    padding: 1rem;
+}
+
+.checkout h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.checkout-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Groups */
+.checkout__name,
+.checkout__address,
+.checkout__payment {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Summary */
+.checkout-summary {
+    background: #f9f9f9;
+}
+
+.order__summary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+}
+
+.order__summary div {
+    padding: 0.3rem 0;
+}
+
+/* Total */
+.order__summary div:last-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Button */
+#checkoutSubmit {
+    padding: 0.8rem;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#checkoutSubmit:hover {
+    background: #e66900;
+}
+
+/* SUCCESS */
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.success-message {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.success h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.success-message p {
+    margin: 0.5rem 0;
+}
+
+#orderId {
+    font-weight: bold;
+    color: #ff7a00;
+    font-size: 1.1rem;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    background: #ff7a00;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #e66900;
+}
