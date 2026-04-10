@@ -14,20 +14,26 @@ export default class ProductDetails {
 
     this.renderProductDetails();
 
-    document
-      .getElementById("add-to-cart")
-      .addEventListener("click", this.addProductToCart.bind(this));
+    const button = document.getElementById("add-to-cart");
+
+    if (button) {
+      button.addEventListener("click", this.addProductToCart.bind(this));
+    }
   }
 
   addProductToCart() {
     const cartItems = getLocalStorage("so-cart") || [];
+
     const existing = cartItems.find(item => item.Id === this.product.Id);
 
     if (existing) {
       existing.quantity = (existing.quantity || 1) + 1;
     } else {
-      this.product.quantity = 1;
-      cartItems.push(this.product);
+      const productToAdd = {
+        ...this.product,
+        quantity: 1
+      };
+      cartItems.push(productToAdd);
     }
 
     setLocalStorage("so-cart", cartItems);

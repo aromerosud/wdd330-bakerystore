@@ -344,7 +344,7 @@ footer {
 }
 
 /* PRODUCT DETAILS */
-/* Contenedor principal */
+/* Main content */
 .product-detail {
     display: flex;
     flex-direction: column;
@@ -355,14 +355,14 @@ footer {
     margin: 0 auto;
 }
 
-/* Título */
+/* Title */
 .product-detail h2 {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-/* Imagen del producto */
+/* Image product */
 .product-detail figure {
     margin: 0;
     width: 100%;
@@ -376,7 +376,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Info del producto */
+/* Info product*/
 #product-info {
     width: 100%;
     display: flex;
@@ -390,13 +390,13 @@ footer {
     line-height: 1.4;
 }
 
-/* Lista de ingredientes */
+/* List ingredients */
 #p-ingredients {
     list-style-type: disc;
     padding-left: 1.5rem;
 }
 
-/* Botón */
+/* Button */
 #add-to-cart {
     background-color: var(--primary-color);
     color: #fff;
@@ -410,4 +410,83 @@ footer {
 
 #add-to-cart:hover {
     background-color: #ff5733;
+}
+
+/* Cart list */
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Item */
+.cart-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* Image */
+.cart-card__image img {
+    width: 80px;
+    border-radius: 8px;
+}
+
+/* Info */
+.card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Name */
+.cart-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card__name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Price and Qty*/
+.cart-card__price {
+    font-weight: bold;
+}
+
+.cart-card__quantity {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Divider */
+.cart-card.divider {
+    border-bottom: 1px solid #eee;
+}
+
+/* Footer cart */
+.list-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Total cart */
+.cart-total {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Cart button */
+.checkout-button {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 6px;
+    text-decoration: none;
 }

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cart | BakeShop</title>
+  <meta name="description"
+    content="View and manage your shopping cart with selected bakery products, including cakes, desserts, and ingredients before checkout.">
+  <meta name="author" content="Arturo Romero">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BakeShop | Cart">
+  <meta property="og:description"
+    content="Review your selected bakery items, manage your cart, and get ready to checkout delicious cakes, desserts, and ingredients. 🛒">
+  <meta property="og:image" content="https://wdd330-bakerystore.onrender.com/images/cake.svg">
+
+  <meta property="og:url" content="https://wdd330-bakerystore.onrender.com/cart/index.html">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/bakery-small.css">
+  <link rel="stylesheet" href="../styles/bakery-larger.css">
+
+  <!-- Scripts -->
+  <script type="module" src="../scripts/cart.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="divider" id="header"></header>
+
+  <!-- MAIN -->
+  <main class="divider">
+    <section class="products">
+
+      <h2>My Cart</h2>
+
+      <!-- LIST PRODUCTS -->
+      <ul class="product-list">
+      </ul>
+
+      <!-- FOOTER OF CART -->
+      <div class="list-footer hide">
+
+        <!-- TOTAL -->
+        <div class="cart-footer">
+          <p class="cart-total">Total: $0.00</p>
+        </div>
+
+        <!-- BOTÓN CHECKOUT -->
+        <a class="checkout-button" href="../checkout/index.html">
+          Proceed to Checkout
+        </a>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer"></footer>
+</body>
+
+</html>

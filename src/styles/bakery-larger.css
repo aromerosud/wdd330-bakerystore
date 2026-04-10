@@ -103,4 +103,38 @@
         padding-left: 0;
     }
 
+    /* CART - ITEM GRID */
+    .cart-card {
+        display: grid;
+        grid-template-columns: 120px 1fr auto;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    /* Image Large */
+    .cart-card__image img {
+        width: 120px;
+    }
+
+    /* Sort info */
+    .card__info {
+        gap: 0.5rem;
+    }
+
+    /* Name large */
+    .card__name {
+        font-size: 1.2rem;
+    }
+
+    /* Footer inline */
+    .list-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .checkout-button {
+        padding: 0.8rem 1.5rem;
+    }
+
 }

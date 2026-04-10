@@ -145,14 +145,33 @@ export default class ExternalServices {
   async findProductById(id) {
     if (this.category === "specials") {
       return this.findProductByIdFromLocal(id);
-    } else {
-      return this.findProductByIdFromAPI(id);
     }
+
+    if (this.category === "ingredients") {
+      return this.findProductByIdFromIngredients(id);
+    }
+
+    return this.findProductByIdFromAPI(id);
   }
 
   async findProductByIdFromLocal(id) {
     const list = await this.getData();
     return list.find(item => item.Id == id);
+  }
+
+  async findProductByIdFromIngredients(id) {
+    const list = await this.getIngredients();
+
+    const item = list.find(p => p.Id === id);
+    if (!item) return null;
+
+    // Generate data ingredients
+    return {
+      ...item,
+      Description: `Ingredient: ${item.Name}`,
+      Ingredients: [item.Name],
+      Rating: (Math.random() * 2 + 3).toFixed(1)
+    };
   }
 
   async findProductByIdFromAPI(id) {
