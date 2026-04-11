@@ -327,6 +327,7 @@ footer {
 
 .product-card {
     display: block;
+    justify-self: center;
 }
 
 .product-card a {
@@ -373,6 +374,7 @@ footer {
     margin: 0;
     width: 100%;
     text-align: center;
+    justify-items: center;
 }
 
 .product-detail figure img {
