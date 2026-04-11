@@ -83,8 +83,13 @@ export function updateCartCount() {
 
   if (!countElement) return;
 
-  if (cartItems.length > 0) {
-    countElement.textContent = cartItems.length;
+  const totalItems = cartItems.reduce(
+    (sum, item) => sum + (item.quantity || 1),
+    0
+  );
+
+  if (totalItems > 0) {
+    countElement.textContent = totalItems;
     countElement.style.display = "flex";
   } else {
     countElement.style.display = "none";
@@ -102,13 +107,15 @@ export function alertMessage(message, scroll = true, type = 'error') {
   const existingAlert = document.querySelector('.alert-message');
   if (existingAlert) {
     existingAlert.remove();
+
+
   }
 
   const alertDiv = document.createElement('div');
   alertDiv.className = `alert-message alert-${type}`;
 
   let messageContent = '';
-  
+
   if (typeof message === 'object') {
     messageContent = '<ul>';
     Object.entries(message).forEach(([key, value]) => {
@@ -139,4 +146,13 @@ export function alertMessage(message, scroll = true, type = 'error') {
   if (scroll) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+
+  const alertmess = document.querySelector(".alert-message");
+
+  setTimeout(() => {
+    alertmess.style.opacity = "0";
+    setTimeout(() => alertmess.remove(), 300);
+  }, 2700);
+
 }

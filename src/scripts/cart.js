@@ -1,7 +1,27 @@
-import { getLocalStorage, updateCartCount, loadHeaderFooter } from "./utils.mjs";
+import { getLocalStorage, updateCartCount, loadHeaderFooter, alertMessage } from "./utils.mjs";
 
 loadHeaderFooter();
 updateCartCount();
+
+const checkoutBtn = document.querySelector(".checkout-button");
+
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", (e) => {
+    const cartItems = getLocalStorage("so-cart") || [];
+
+    const totalItems = cartItems.reduce(
+      (sum, item) => sum + (item.quantity || 1),
+      0
+    );
+
+    if (totalItems === 0) {
+      e.preventDefault();
+      alertMessage("Your cart is empty!", true, "error");
+    }
+  });
+}
+
+
 
 function renderCartContents() {
   const cartItems = getLocalStorage("so-cart") || [];

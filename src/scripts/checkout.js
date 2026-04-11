@@ -11,15 +11,27 @@ document
     .querySelector("#zip")
     .addEventListener("blur", order.calculateOrderTotal.bind(order));
 
-document.querySelector("#checkoutSubmit").addEventListener("click", (e) => {
+document.querySelector("#checkoutSubmit").addEventListener("click", async (e) => {
     e.preventDefault();
-    
+
     const form = document.forms["checkout"];
-    
+
     if (!form.checkValidity()) {
-            form.reportValidity();
+        form.reportValidity();
         return;
     }
 
-    order.checkout();
+    const button = e.target;
+
+    // Spinner
+    button.disabled = true;
+    button.innerHTML = `<span class="spinner-small"></span>`;
+
+    try {
+        await order.checkout();
+    } catch (err) {
+        console.error(err);
+        button.disabled = false;
+        button.textContent = "Checkout";
+    }
 });

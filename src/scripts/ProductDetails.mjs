@@ -10,7 +10,16 @@ export default class ProductDetails {
   }
 
   async init() {
+    const container = document.querySelector(".product-detail");
+
+    // Spinner
+    container.insertAdjacentHTML("afterbegin", `<div class="spinner"></div>`);
+
     this.product = await this.dataSource.findProductById(this.productId);
+
+    const spinner = container.querySelector(".spinner");
+    if (spinner) spinner.remove();
+
 
     this.renderProductDetails();
 
