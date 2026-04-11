@@ -2,7 +2,7 @@ export const specials = [
     {
         Id: 1,
         Name: "Special Cake Box",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/cake-boxes.webp",
         Price: 19.99,
         Category: "specials",
         Description: "A delicious selection of cakes perfect for any occasion.",
@@ -12,7 +12,7 @@ export const specials = [
     {
         Id: 2,
         Name: "Cupcake Combo",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/cupcake-combo.webp",
         Price: 12.99,
         Category: "specials",
         Description: "A mix of soft and fluffy cupcakes with different flavors.",
@@ -22,7 +22,7 @@ export const specials = [
     {
         Id: 3,
         Name: "Chocolate Lovers Pack",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/chocolate-lovers-pack.webp",
         Price: 22.5,
         Category: "specials",
         Description: "A rich chocolate assortment for true chocolate fans.",
@@ -32,7 +32,7 @@ export const specials = [
     {
         Id: 4,
         Name: "Mini Dessert Box",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/mini-dessert-box.webp",
         Price: 14.75,
         Category: "specials",
         Description: "A small but delightful box of assorted mini desserts.",
@@ -42,7 +42,7 @@ export const specials = [
     {
         Id: 5,
         Name: "Birthday Cake Special",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/birthday-cake-special.webp",
         Price: 25.0,
         Category: "specials",
         Description: "Perfect birthday cake with creamy frosting and decorations.",
@@ -52,7 +52,7 @@ export const specials = [
     {
         Id: 6,
         Name: "Family Sweet Pack",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/family-sweet-pack.webp",
         Price: 29.99,
         Category: "specials",
         Description: "A large pack of sweets ideal for family gatherings.",
@@ -62,7 +62,7 @@ export const specials = [
     {
         Id: 7,
         Name: "Weekend Treat Box",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/weekend-treat-box.webp",
         Price: 18.5,
         Category: "specials",
         Description: "Treat yourself with a variety of weekend desserts.",
@@ -72,7 +72,7 @@ export const specials = [
     {
         Id: 8,
         Name: "Premium Cake Selection",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/premium-cake-selection.webp",
         Price: 34.99,
         Category: "specials",
         Description: "A premium selection of gourmet cakes.",
@@ -81,8 +81,8 @@ export const specials = [
     },
     {
         Id: 9,
-        Name: "Coffee & Dessert Combo",
-        Image: "/images/cake.svg",
+        Name: "Chocolate & Dessert Combo",
+        Image: "/images/specials/chocolate-dessert-combo.webp",
         Price: 16.99,
         Category: "specials",
         Description: "A perfect combo of coffee and sweet desserts.",
@@ -92,7 +92,7 @@ export const specials = [
     {
         Id: 10,
         Name: "Chocolate & Strawberry Box",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/chocolate-Strawberry-box.webp",
         Price: 21.0,
         Category: "specials",
         Description: "A delicious mix of chocolate and fresh strawberries.",
@@ -102,7 +102,7 @@ export const specials = [
     {
         Id: 11,
         Name: "Deluxe Cupcake Pack",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/deluxe-cupcake-pack.webp",
         Price: 19.5,
         Category: "specials",
         Description: "A deluxe pack of beautifully decorated cupcakes.",
@@ -112,7 +112,7 @@ export const specials = [
     {
         Id: 12,
         Name: "Sweet Surprise Box",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/sweet-surprise-box.webp",
         Price: 17.25,
         Category: "specials",
         Description: "A surprise selection of assorted sweet treats.",
@@ -122,7 +122,7 @@ export const specials = [
     {
         Id: 13,
         Name: "Dessert Party Pack",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/dessert-party-pack.webp",
         Price: 39.99,
         Category: "specials",
         Description: "The ultimate dessert pack for parties and events.",
@@ -132,7 +132,7 @@ export const specials = [
     {
         Id: 14,
         Name: "Classic Favorites Box",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/classic-favorites-box.webp",
         Price: 23.99,
         Category: "specials",
         Description: "A collection of classic bakery favorites.",
@@ -142,7 +142,7 @@ export const specials = [
     {
         Id: 15,
         Name: "Bakery Sampler Pack",
-        Image: "/images/cake.svg",
+        Image: "/images/specials/bakery-sampler-pack.webp",
         Price: 27.49,
         Category: "specials",
         Description: "A sampler pack with a variety of bakery delights.",

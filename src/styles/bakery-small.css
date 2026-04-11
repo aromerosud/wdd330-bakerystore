@@ -2,11 +2,16 @@
     --font-body: Arial, Helvetica, sans-serif;
     --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
-    --primary-color: #f0a868;
+    --primary-color: #773a05;
     --secondary-color: #525b0f;
-    --tertiary-color: #e29e9a;
+    --tertiary-color: #a94442;
     --light-grey: #d0d0d0;
     --dark-grey: #303030;
+    --black-color: #0e0101f1;
+
+    --text-button: #ffffff;
+
+    --button-hover: #42280e;
 
     --font-base: 18px;
     --small-font: 0.8em;
@@ -126,7 +131,8 @@ header {
     margin: 1.5rem auto;
     padding: 1.5rem;
     background-color: #ffffff;
-    color: #333;
+    color: var(--black-color);
+    font-weight: bold;
     text-align: center;
     border-radius: 16px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -314,7 +320,7 @@ footer {
 
 .search-container,
 .sort-container {
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
 }
 
 /* CARDS IN LIST PRODUCTS */
@@ -399,7 +405,8 @@ footer {
 /* Button */
 #add-to-cart {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-button);
+    font-weight: bold;
     border: none;
     padding: 0.75rem 1.2rem;
     font-size: 1rem;
@@ -409,7 +416,7 @@ footer {
 }
 
 #add-to-cart:hover {
-    background-color: #ff5733;
+    background-color: var(--button-hover);
 }
 
 /* Cart list */
@@ -484,11 +491,15 @@ footer {
 /* Cart button */
 .checkout-button {
     text-align: center;
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-button);
     padding: 0.7rem;
     border-radius: 6px;
     text-decoration: none;
+}
+
+.checkout-button:hover {
+    background-color: var(--button-hover);
 }
 
 /* CHECKOUT */
@@ -559,8 +570,8 @@ input {
 /* Button */
 #checkoutSubmit {
     padding: 0.8rem;
-    background: #ff7a00;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-button);
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -569,7 +580,7 @@ input {
 }
 
 #checkoutSubmit:hover {
-    background: #e66900;
+    background: var(--button-hover);
 }
 
 /* SUCCESS */
@@ -603,7 +614,7 @@ input {
 
 #orderId {
     font-weight: bold;
-    color: #ff7a00;
+    color: var(--primary-color);
     font-size: 1.1rem;
 }
 
@@ -611,13 +622,13 @@ input {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.8rem 1.2rem;
-    background: #ff7a00;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-button);
     text-decoration: none;
     border-radius: 8px;
     transition: 0.3s;
 }
 
 .button:hover {
-    background: #e66900;
+    background: var(--button-hover);
 }
